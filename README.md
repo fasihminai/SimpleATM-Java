@@ -48,11 +48,17 @@ GUI version for better user experience
 1. Clone the repository:
 ```bash
 git clone https://github.com/fasihminai/SimpleATM-Java.git
-
+```
+2. Navigate to the project folder:
+```bash
 cd SimpleATM-Java
-
+```
+3. Compile the Java file:
+```bash
 javac MyATMProject.java
-
+```
+4. Run the program:
+```bash
 java MyATMProject
-
+```
 
