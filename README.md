@@ -30,4 +30,25 @@ A simple **console-based ATM program** written in Java demonstrating **Object-Or
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/SimpleATM-Java.git
+git clone https://github.com/fasihminai/SimpleATM-Java.git
+
+
+Usage
+
+Enter your PIN (default: 1234).
+
+If wrong PIN is entered 3 times, the program will block access.
+
+Choose from the menu to check balance, deposit, withdraw, or exit.
+
+
+
+Future Improvements
+
+Multiple account support with transfer between accounts
+
+Input validation for negative numbers
+
+Hiding PIN input while typing
+
+GUI version for better user experience
