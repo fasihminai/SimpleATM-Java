@@ -17,12 +17,11 @@ A simple **console-based ATM program** written in Java demonstrating **Object-Or
 
 ---
 
-## OOP Concepts Demonstrated
+## OOP Concept Used
 
-- **Encapsulation**: PIN and balance are private and accessed only via methods.  
-- **Abstraction**: Abstract `BankAccount` class with abstract method `message()`.  
-- **Inheritance**: `ATM` class extends `BankAccount`.  
-- **Polymorphism**: `message()` method overridden in `ATM` class.
+### Encapsulation
+- PIN and balance are private variables
+- Access is controlled through public methods
 
 ---
 
@@ -55,10 +54,10 @@ cd SimpleATM-Java
 ```
 3. Compile the Java file:
 ```bash
-javac MyATMProject.java
+javac MyATMProject1.java
 ```
 4. Run the program:
 ```bash
-java MyATMProject
+java MyATMProject1
 ```
 
