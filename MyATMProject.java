@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
-//  Abstraction + Encapsulation 
-abstract class BankAccount {
-    private int pin = 1234;     
+class ATM {
+
+    private int pin = 1234;
     private double balance = 1000;
 
     public boolean checkPin(int enteredPin) {
@@ -18,33 +18,24 @@ abstract class BankAccount {
     }
 
     public void withdraw(double amt) {
-        if (amt <= balance)
+        if (amt <= balance) {
             balance -= amt;
-        else
+        } else {
             System.out.println("Insufficient balance!");
-    }
-
-    abstract void message();  
-}
-
-//  Inheritance + Polymorphism 
-class ATM extends BankAccount {
-    @Override
-    void message() {  
-        System.out.println("Welcome to Simple ATM System");
+        }
     }
 }
 
-//  Main class 
-public class MyATMProject {
+
+// Main Class 
+public class MyATMProject1 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
         ATM atm = new ATM();
 
-        atm.message();  
+        System.out.println("Welcome to Simple ATM System");
 
-        //  3 PIN attempt system 
         int tries = 0;
         boolean loggedIn = false;
 
@@ -62,7 +53,7 @@ public class MyATMProject {
         }
 
         if (loggedIn) {
-            //  Menu Loop 
+
             while (true) {
                 System.out.println("\n1. Check Balance");
                 System.out.println("2. Deposit");
@@ -74,23 +65,28 @@ public class MyATMProject {
 
                 if (ch == 1) {
                     System.out.println("Balance = " + atm.getBalance());
-                } else if (ch == 2) {
+                } 
+                else if (ch == 2) {
                     System.out.print("Enter amount: ");
                     double amt = sc.nextDouble();
                     atm.deposit(amt);
                     System.out.println("Deposited");
-                } else if (ch == 3) {
+                } 
+                else if (ch == 3) {
                     System.out.print("Enter amount: ");
                     double amt = sc.nextDouble();
                     atm.withdraw(amt);
-                } else if (ch == 4) {
+                } 
+                else if (ch == 4) {
                     System.out.println("Thank you! Exiting...");
                     break;
-                } else {
+                } 
+                else {
                     System.out.println("Invalid choice");
                 }
             }
-        } else {
+        } 
+        else {
             System.out.println("Card blocked! Too many wrong attempts.");
         }
 
